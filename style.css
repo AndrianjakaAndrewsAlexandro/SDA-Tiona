@@ -70,7 +70,7 @@ h1{
 
 .div{
     display: flex;
-    width: 700px;
+    width: 80vw;
     height: 200px;
     background: rgb(22, 191, 233);
     border: 2px solid #119;
