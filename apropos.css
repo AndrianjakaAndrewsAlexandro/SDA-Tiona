@@ -2,10 +2,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    box-sizing: border-box;
+    height: 100vh;
+    position: relative;
 }
 
 header{
@@ -57,10 +59,29 @@ footer{
     justify-content: center;
     position: absolute;
     bottom: 10px;
-    width: 100vw;
+    width: 100%;
     height: 40px;
     background-color: #666;
     color: #FFF;
-    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 400%;
+    background-color: rgb(22, 191, 233);
+    border: 2px solid #119;
+    border-radius: 16px;
+    margin: 16px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 10px;
 }
 
