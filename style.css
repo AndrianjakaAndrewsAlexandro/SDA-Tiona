@@ -78,6 +78,10 @@ footer{
     animation: entete 6s ease .8s forwards;
 }
 
+footer p{
+    text-align: center;
+}
+
 h1{
     text-align: center;
     animation: titre 3s ease .1s forwards;
