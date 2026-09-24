@@ -31,14 +31,19 @@ body p{
 
 .section1{
     display: flex;
+    position: fixed;
+    bottom: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 2vw;
+    z-index: 100;
+    background: var(--gris);
 }
 
 .section1.active{
-    visibility: hidden;
+    display: none;
+    background: none;
 }
 
 
@@ -48,13 +53,10 @@ form{
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    visibility: hidden;
     border-radius: 2vw;
 }
 
-form.active{
-    visibility: visible;
-}
+
 
 .entree{
     width: 40vw;
@@ -113,11 +115,7 @@ form.active{
 /*--------------------------                 SECTION 2                -----------------------------*/
 
 .section2{
-    visibility: hidden;
-}
-
-.section2.active{
-    visibility: visible;
+    display: block;
 }
 
 .section2 img{
@@ -128,6 +126,9 @@ form.active{
 @media (max-width: 696px){
     .entree{
         width: 60vw;
+    }
+    .section1{
+        bottom: 60px;
     }
 }
 
