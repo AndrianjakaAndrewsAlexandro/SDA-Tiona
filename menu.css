@@ -1,25 +1,27 @@
-:root{
-    --blanche: #FFF;
-    --bleu: rgb(35, 35, 233);
-    --gris: #A0A0A0;
-    --noir: #000;
-    --ombre: #292727;
-}
+:root {
+            --blue-adv: #002D62;
+            --gold-adv: #FFB800;
+            --white: #e1e4d6;
+            --light-gray: #f4f4f4;
+            --gris: #666;
+            --blache: #FFF;
+        }
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Roboto;
+    box-sizing: border-box;
 }
 
 body{
-    color: var(--noir);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-inline: 2vw;
+    line-height: 1.6;
 }
 
 body p{
@@ -32,13 +34,16 @@ body p{
 .section1{
     display: flex;
     position: fixed;
-    bottom: 20px;
+    top: 10vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 2vw;
+    border-radius: 4vw;
     z-index: 100;
-    background: var(--gris);
+    width: 90%;
+    background-color: var(--blue-adv);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+    height: 75%;
 }
 
 .section1.active{
@@ -52,39 +57,42 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
-    border-radius: 2vw;
+    gap: 4vw;
+    border-radius: 4vw;
 }
 
 
 
 .entree{
-    width: 40vw;
+    width: 100%;
     height: 40px;
-    border: 2px solid var(--bleu);
+    border: 2px solid var(--white);
     border-radius: 8px;
     padding: .6vw;
-    font-size: calc(1.6vw + 18px);
+    font-size: calc(2.1vw + 18px);
     font-weight: 600;
-    color: var(--bleu);
+    color: var(--blue-adv);
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .clavier_numerique{
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(4, 80px);
-    gap: 1.4vw;
+    gap: 1.8vw;
 }
 
 .key{
     display: flex;
-    border: 2px solid var(--bleu);
+    border: 2px solid var(--gold-adv);
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: calc(1.6vw + 20px);
-    border-radius: 1vw;
+    border-radius: 50%;
+    background: var(--blue-adv);
+    color: var(--light-gray);
 }
 
 .key i{
@@ -97,29 +105,63 @@ form{
 .dialpad{
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: calc(2vw + 40px);
     font-size: calc(1.2vw + 4px);
     cursor: pointer;
-    border: 2px solid var(--bleu);
-    background-color: var(--bleu);
-    padding: 1vw;
+    border: 1px solid var(--bleu);
+    background-color: var(--blue-adv);
+    padding: 2vw;
     color: var(--blanche);
-    border-radius: 1vw;
-    box-shadow: 5px 5px var(--ombre);
+    border-radius: 50%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
 }
 
 .ti-dialpad{
-    font-size: 40px;
+    font-size: 28px;
+    color: var(--blache);
 }
 
 /*--------------------------                 SECTION 2                -----------------------------*/
 
 .section2{
     display: block;
+    z-index: 10;
 }
 
 .section2 img{
     width: 98vw;
+}
+
+.bottom-tabs{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: var(--blue-adv);
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
+    padding-block: 1vw;
+}
+
+.bottom-tabs a{
+    text-decoration: none;
+}
+
+.bottom-tabs i{
+    font-size: 28px;
+    color: var(--blache);
+}
+
+.bottom-tabs .ti-device-desktop{
+    color: var(--gold-adv);
+    text-decoration: underline;
+}
+
+.tsisy{
+    position: fixed;
+    top: 45%;
+    z-index: 1;
 }
 
 

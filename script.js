@@ -144,14 +144,14 @@ ok.addEventListener("click", function(){
     pk3 = "TIONA/" + entree.value + "_3.jpg";
                         
     
-    if (listes.includes(entree.value + "_1")){
+    if (/*listes.includes(entree.value + "_1")*/true){
         img1.src= pk1;
     }
     else{
         alert("Miala tsiny fa tsy ato anaty base de donnée ny hira izay tadiavinareo tompoko")
     }
 
-    if (listes.includes(entree.value + "_2")){
+    if (/*listes.includes(entree.value + "_2")*/true){
         img2.src= pk2;
     }
 

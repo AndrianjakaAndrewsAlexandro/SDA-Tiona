@@ -1,110 +1,49 @@
+:root {
+            --blue-adv: #002D62;
+            --gold-adv: #FFB800;
+            --white: #e1e4d6;
+            --light-gray: #f4f4f4;
+            --gris: #666;
+            --blanche: #FFF;
+        }
+
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
-    position: relative;
+    background-color: var(--light-gray);
+    line-height: 1.6;
 }
 
 header{
     display: flex;
-    background-color: #119;
-    width: 90vw;
-    height: 70px;
-    color: #FFF;
-    border-radius: 25px;
-    margin: 20px auto;
-    animation: entete 4s ease .1s forwards ;
-}
-
-@keyframes entete{
-    from{transform: translateY(-20px);
-    opacity: 0;
-    }
-    to{transform: translateY(0px);
-    opacity: 1;}
-}
-
-
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    position: absolute;
-    margin: auto;
-    width: 90vw;
-    height: 70px;
-}
-
-.navbar li{
-    border: #FFF 2px solid;
-    list-style-type: none;
-    border-radius: 40px;
-    padding: 8px;
-    animation: entete 4s ease .3s forwards
-}
-
-.navbar li:hover{
-    background-color: #fff;
-    border: 2px solid  #119 ;  
-}
-
-.navbar a{
-    color: #FFF;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover{
-    color:  #119;
-}
-
-footer{
-    display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100vw;
-    border: #666;
-    height: 40px;
-    background-color: #666;
+    background-color: var(--blue-adv);
+    width: 100%;
+    padding-block: 2vw;
     color: #FFF;
-    animation: entete 6s ease .8s forwards;
 }
 
-footer p{
-    text-align: center;
-    font-size: 1em;
-}
 
 h1{
+    font-size: calc(2.1vw + 18px);
     text-align: center;
-    animation: titre 3s ease .1s forwards;
+    color: var(--gold-adv);
 }
 
-@keyframes titre{
-    0%{transform: translateX(-100%)
-        scale(0)}
-    50%{transform: translateX(100%)
-        scale(.5)}
-    100%{
-        transform: translateX(0%)
-        scale(1)}
-}
 
 .div{
     display: flex;
     flex-direction: column;
     width: 80vw;
     height: 400%;
-    background-color: rgb(22, 191, 233);
-    border: 2px solid #119;
+    background-color: var(--blue-adv);
+    border: 2px solid var(--blue-adv);
     border-radius: 16px;
     margin: 16px auto;
     text-align: center;
@@ -112,6 +51,39 @@ h1{
     justify-content: center;
     padding: 40px;
     gap: 10px;
-    animation: entete 6s ease .5s forwards
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+}
+
+.div p{
+    color: var(--blanche);
+}
+
+.div span{
+    color: var(--gold-adv);
+}
+
+.bottom-tabs{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: var(--blue-adv);
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
+    padding-block: 1vw;
+}
+
+.bottom-tabs a{
+    text-decoration: none;
+}
+
+.bottom-tabs i{
+    font-size: 28px;
+    color: var(--blanche);
+}
+
+.bottom-tabs .ti-home{
+    color: var(--gold-adv);
+    text-decoration: underline;
 }
 
